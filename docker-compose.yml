@@ -1,0 +1,9 @@
+postgres:
+  ports:
+    - '5436:5432'
+  restart: always
+  image: postgres:9.6.5-alpine
+  environment:
+    - POSTGRES_DB=${POSTGRES_DB}
+    - POSTGRES_USER=${POSTGRES_USER}
+    - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
